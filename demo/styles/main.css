@@ -1,0 +1,364 @@
+html, body {
+    position: relative;
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0E0E0E;
+    color: #ffffff;
+    font-weight: 400;
+}
+.hidden {
+    display: none;
+}
+
+.mdl-grid {
+    position: relative;
+    z-index: 2;
+    height: 95%;
+    margin: 0;
+    padding: 0;
+}
+
+.mdl-cell {
+    min-height: 97%;
+    overflow: hidden;
+}
+
+.player-cell {
+    height: 97%; /*bug fix for safari */
+}
+.player {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.controller-container {
+    position: relative;
+    height: 90%;
+    width: 90%;
+    overflow: hidden;
+}
+
+.card-image {
+    min-height: inherit;
+}
+
+.card-image.mdl-card {
+    background-color: #e0e0e0;
+    background-position: center;
+    background-size: cover;
+}
+
+.mdl-card__supporting-text {
+    color: #fff;
+    font-size: 3vw;
+    font-weight: 300;
+    background: rgba(0, 0, 0, 0.5);
+}
+.mdl-card__supporting-text span {
+    font-size: 3.5vw;
+    font-weight: 400;
+}
+.span-artist {
+    font-weight: 300;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.blurbackground {
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(50px);
+    filter: blur(50px);
+    opacity: 0.5;
+    background-image: url(../images/artwork-not-found.png);
+}
+
+.mdl-spinner {
+    height: 50px;
+    width: 50px;
+}
+
+.searchUI {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.searchContainer {
+    width: 75%;
+}
+
+/* search bar */
+.searchBar {
+    width: 100%;
+    border: 1px solid #ffffff;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+.searchBar,
+.searchBar form,
+.searchBar input {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.searchBar,
+.searchBar form {
+  /* Cross browser inline-flex */
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.searchBar button {
+    color: #fff;
+    width: 35px;
+    height: 35px;
+    margin: 5px;
+}
+
+.searchBar input {
+    opacity: 1;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    color: #FFFFFF;
+    background-color: transparent;
+    padding: 0px 20px 0px 20px;
+    height: 45px;
+    line-height: 45px;
+}
+
+.searchBar input::-webkit-input-placeholder { /* WebKit browsers */
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+.searchBar input:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #FFFFFF;
+    font-weight: 300;
+    opacity: 1; /* Firefox gives the placeholder a reduced opacity so we have to increase it */
+}
+
+.searchBar input:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #FFFFFF;
+    font-weight: 300;
+}
+
+/*results grid starts*/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 40vw 40vw 40vw;
+    grid-gap: 5px;
+}
+
+.grid-item {
+    width: 100%;
+}
+
+/*results grid ends*/
+
+.displayTitle {
+    color: #ffffff;
+}
+
+.displayRow {
+    margin: 40px 0;
+}
+
+.spinner-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.textinfo {
+    margin: 0 36px !important;
+}
+
+.blocker {
+    display: none;
+}
+
+.links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 9;
+    width: 100%;
+    bottom: 0;
+    background-color: #0E0E0E;
+    color: #fff;
+    height: 5%;
+    min-height: 30px;
+}
+
+.links p {
+    font-size: 2vh;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+}
+
+.links img, .links a {
+    height: 80%;
+    margin: 10% 0.5vh;
+}
+
+.links img {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+/*===*** TABLET LAYOUT ***===*/
+
+@media (max-width: 839px) and (min-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 15vw;
+    }
+    .mdl-cell {
+        height: auto;
+        min-height: inherit;
+        min-height: 47%;
+        overflow: inherit;
+    }
+    .player-cell {
+        height: 47%; /*bug fix for safari */
+    }
+    .mdl-card__supporting-text {
+        font-size: 0px;
+        line-height: 0px;
+    }
+    .mdl-card__supporting-text span {
+        font-size: 1.8vw;
+        line-height: normal;
+    }
+}
+
+/*===*** SMALL DESKTOP LAYOUT ***===*/
+
+@media (min-width: 840px) and (max-width: 1024px) {
+    .textinfo {
+        margin: 0 24px !important;
+    }
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 10vw;
+    }
+    .mdl-cell {
+        overflow: inherit;
+    }
+    .player-cell {
+        height: 97%; /*bug fix for safari */
+    }
+    .mdl-card__supporting-text {
+        font-size: 0px;
+        line-height: 0px;
+    }
+    .mdl-card__supporting-text span {
+        font-size: 1.2vw;
+        line-height: normal;
+    }
+    .controller-container {
+        max-height: 720px;
+    }
+}
+
+/*===*** browser too small ***===*/
+
+@media (max-height: 600px) and (max-width: 839px) and (min-width: 480px) {
+    .blocker {
+        display: block;
+        position: absolute;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        background: #0E0E0E;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        color: #ffffff;
+    }
+    
+    .mdl-cell {
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+/*===*** DESKTOP LAYOUT ***===*/
+
+@media (min-width: 1025px) {
+    .mdl-card__supporting-text {
+        line-height: 1.2vw;
+        font-size: 0.9vw;
+    }
+    .mdl-card__supporting-text span {
+        font-size: 1vw;
+    }
+    .textinfo {
+        margin: 0 56px !important;
+    }
+    .grid {
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 10vw;
+    }
+    .mdl-cell {
+        overflow: inherit;
+    }
+    .player-cell {
+        height: 97%; /*bug fix for safari */
+    }
+}

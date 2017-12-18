@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    
+    <!-- material design lite resources -->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-green.min.css" />
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    
+    <!-- material design icons and font -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    <!--styles and scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    
+    <!-- script to get the color of the images -->
+    <script src="scripts/jquery.adaptive-backgrounds.js"></script>
+</head>
+<body>
+    <div class="controller-container">
+        <div class="layout mdl-layout mdl-js-layout">
+            <!-- nav bar -->
+            <header class="mdl-layout__header-row">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="closebutton">
+                    <i class="material-icons">close</i>
+                </button>
+            </header>
+            <!-- player -->
+            <main class="mdl-layout__content">
+                <!-- album image and play/pause button -->
+                <section id="cover" data-adaptive-background data-ab-css-background>
+                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored fab" id="statebutton">
+                        <i class="material-icons">play_arrow</i>
+                    </button>
+                </section>
+                <!-- title and artist-->
+                <section class="mdl-card mdl-shadow--8dp card textbackground" id="mediainfo">
+                    <h3 id="title" class="textinfo light">Lorem ipsum</h3>
+                    <h4 id="author" class="textinfo light">Lorem ipsum </h4>
+                </section>
+                <!-- hidden volume slider -->
+                <div class="mdl-card mdl-shadow--16dp mdl-layout__header-row volumecard card hidden" id="volumecard">
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeoff">
+                        <i class="material-icons">volume_off</i>
+                    </button>
+                    <p class="progresscontainer">
+                        <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="100" value="100" tabindex="0" id="volume" />
+                    </p>
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeup">
+                        <i class="material-icons">volume_up</i>
+                    </button>
+                </div>
+                <!-- bottom secction with volume, progress bar and time -->
+                <section class="mdl-card mdl-shadow--8dp mdl-layout__header-row card">
+                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeopen">
+                        <i class="material-icons">volume_up</i>
+                    </button>
+                    <p class="progresscontainer">
+                        <input class="mdl-slider mdl-js-slider" type="range"
+          min="0" max="1" value="0" tabindex="0" id="progress" />
+                    </p>
+                    <h6 id="time">00:00</h6>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
