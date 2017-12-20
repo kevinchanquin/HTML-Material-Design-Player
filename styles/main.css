@@ -14,7 +14,7 @@ html, body {
 .mdl-grid {
     position: relative;
     z-index: 2;
-    height: 95%;
+    height: calc(100% - 40px);
     margin: 0;
     padding: 0;
 }
@@ -234,20 +234,19 @@ html, body {
     bottom: 0;
     background-color: #0E0E0E;
     color: #fff;
-    height: 5%;
-    min-height: 30px;
+    height: 40px;
 }
 
 .links p {
-    font-size: 2vh;
+    font-size: 15px;
     font-weight: 300;
     margin: 0;
     padding: 0;
 }
 
 .links img, .links a {
-    height: 80%;
-    margin: 10% 0.5vh;
+    height: 76%;
+    margin: 12% 5px;
 }
 
 .links img {
