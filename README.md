@@ -6,18 +6,18 @@ A free HTML5 music player interface, built with the Material Design Lite library
 
 ## Getting Started
 
-Copy all files from the “src” folder in your root directory and include them in your page, like so:
+Copy all files from the [“src”](src) folder in your root directory and include them in your page, like so:
 
 Material Player library:
 
-```
+```html
 <script src="scripts/script.js"></script>
 <link rel="stylesheet" href="styles/style.css">
 ```
 
 Third party libraries:
 
-```
+```html
 <!-- material design lite > https://getmdl.io -->
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.grey-green.min.css" />
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -35,7 +35,7 @@ Third party libraries:
 
 Add the player to your page:
 
-```
+```html
     <div class="controller-container">
         <div class="layout mdl-layout mdl-js-layout">
             <!-- nav bar -->
@@ -94,7 +94,9 @@ Or use the [index.html](src/index.html) file and modify it as you please.
 
 Call the function `setMediaInfo(cover, title, author, duration)` like so:
 
-`setMediaInfo("https://some-image.jpg", "Stressed Out", "Twenty One Pilots", 30000)`
+```javascript
+setMediaInfo("https://some-image.jpg", "Stressed Out", "Twenty One Pilots", 30000);
+```
 
 ### Change the icon of the play/pause button
 
@@ -113,7 +115,7 @@ The player will emit certain events when the user interacts with the player, thi
 
 The player will call the function `toogleMedia(action)` where action can be either “play”, “pause” or “stop”. Define this function in your script, for example:
 
-```
+```javascript
 function toggleMedia(action) {
     //when play button is pressed play the audio element
     if (action == 'play') {
@@ -137,7 +139,7 @@ function toggleMedia(action) {
 
 The player will call the function `seek(value)` where value it’s the current time in milliseconds. Define this function in your script, for example:
 
-```
+```javascript
 function seek(value) {
     //conver ml to sec
     value = ((value % 60000) / 1000).toFixed(0);
@@ -152,7 +154,7 @@ function seek(value) {
 
 The player will call the function `changeVolume(value)` where value it’s a number from 0 to 100. Define this function in your script, for example:
 
-```
+```javascript
 function changeVolume(value) {
     //convert percentage to decimal
     value = value / 100;
