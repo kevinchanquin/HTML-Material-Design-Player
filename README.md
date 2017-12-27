@@ -168,6 +168,7 @@ function changeVolume(value) {
 
 ## Credits
 
-This project the Open Source library
-jquery.adaptive-backgrounds.js (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
-License MIT (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js#license)
+This project the Open Source library:
+
+jquery.adaptive-backgrounds.js (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js).
+License MIT (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js#license).
