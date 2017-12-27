@@ -102,20 +102,18 @@ setMediaInfo("https://some-image.jpg", "Stressed Out", "Twenty One Pilots", 3000
 
 ### Change the icon of the play/pause button
 
-Call the function `toggleIcon(action)` 
-Where action can be either “play” to set the play button or “pause” to set the pause button.
+Call the function `toggleIcon(action)`, where action can be either “play” to set the play button or “pause” to set the pause button.
 
 ### Update the progress bar
 
-Call the function `updateProgress(value)` 
-Where value is the current time of the media being played in milliseconds.
+Call the function `updateProgress(value)`, where value is the current time of the media being played in milliseconds.
 
 ## Events emitted
 The player will emit certain events when the user interacts with the player, this interactions can be:
 
 ### The user clicks play / pause / stop
 
-The player will call the function `toogleMedia(action)` where action can be either “play”, “pause” or “stop”. Define this function in your script, for example:
+The player will call the function `toogleMedia(action)`, where action can be either “play”, “pause” or “stop”. Define this function in your script, for example:
 
 ```javascript
 function toggleMedia(action) {
@@ -168,7 +166,8 @@ function changeVolume(value) {
 
 ## Credits
 
-This project the Open Source library:
+This project uses the Open Source library:
 
-jquery.adaptive-backgrounds.js (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js).
-License MIT (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js#license).
+jquery.adaptive-backgrounds.js (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
+
+License \(MIT\) (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js#license)
