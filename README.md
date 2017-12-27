@@ -1,14 +1,16 @@
 # HTML Material Design Player
 
-A free HTML5 music player interface, built with the Material Design Lite library and jQuery.
+A customizable HTML5 music player interface, built with the Material Design Lite library and jQuery.
 
 [See a Demo](https://kevinchanquin.github.io/HTML-Material-Design-Player/)
 
+![Material Design Player](https://dl.dropboxusercontent.com/s/ujz4i58yx1j6qy3/1%20Thumb.jpg)
+
 ## Getting Started
 
-Copy all files from the [“src”](src) folder in your root directory and include them in your page, like so:
+Copy all files from the [src](src) folder in your root directory and include them in your page, like so:
 
-Material Player library:
+Material Player:
 
 ```html
 <script src="scripts/script.js"></script>
@@ -36,54 +38,54 @@ Third party libraries:
 Add the player to your page:
 
 ```html
-    <div class="controller-container">
-        <div class="layout mdl-layout mdl-js-layout">
-            <!-- nav bar -->
-            <header class="mdl-layout__header-row">
-                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="closebutton">
-                    <i class="material-icons">close</i>
+<div class="controller-container">
+    <div class="layout mdl-layout mdl-js-layout">
+        <!-- nav bar -->
+        <header class="mdl-layout__header-row">
+            <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect" id="closebutton">
+                <i class="material-icons">close</i>
+            </button>
+        </header>
+        <!-- player -->
+        <main class="mdl-layout__content">
+            <!-- album image and play/pause button -->
+            <section id="cover" data-adaptive-background data-ab-css-background>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored fab" id="statebutton">
+                    <i class="material-icons">play_arrow</i>
                 </button>
-            </header>
-            <!-- player -->
-            <main class="mdl-layout__content">
-                <!-- album image and play/pause button -->
-                <section id="cover" data-adaptive-background data-ab-css-background>
-                    <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored fab" id="statebutton">
-                        <i class="material-icons">play_arrow</i>
-                    </button>
-                </section>
-                <!-- title and artist-->
-                <section class="mdl-card mdl-shadow--8dp card textbackground" id="mediainfo">
-                    <h3 id="title" class="textinfo light">Ready</h3>
-                    <h4 id="author" class="textinfo light">to play</h4>
-                </section>
-                <!-- hidden volume slider -->
-                <div class="mdl-card mdl-shadow--16dp mdl-layout__header-row volumecard card hidden" id="volumecard">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeoff">
-                        <i class="material-icons">volume_off</i>
-                    </button>
-                    <p class="progresscontainer">
-                        <input class="mdl-slider mdl-js-slider" type="range"
-          min="0" max="100" value="100" tabindex="0" id="volume" />
-                    </p>
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeup">
-                        <i class="material-icons">volume_up</i>
-                    </button>
-                </div>
-                <!-- bottom secction with volume, progress bar and time -->
-                <section class="mdl-card mdl-shadow--8dp mdl-layout__header-row card">
-                    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeopen">
-                        <i class="material-icons">volume_up</i>
-                    </button>
-                    <p class="progresscontainer">
-                        <input class="mdl-slider mdl-js-slider" type="range"
-          min="0" max="1" value="0" tabindex="0" id="progress" />
-                    </p>
-                    <h6 id="time">00:00</h6>
-                </section>
-            </main>
-        </div>
+            </section>
+            <!-- title and artist-->
+            <section class="mdl-card mdl-shadow--8dp card textbackground" id="mediainfo">
+                <h3 id="title" class="textinfo light">Ready</h3>
+                <h4 id="author" class="textinfo light">to play</h4>
+            </section>
+            <!-- hidden volume slider -->
+            <div class="mdl-card mdl-shadow--16dp mdl-layout__header-row volumecard card hidden" id="volumecard">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeoff">
+                    <i class="material-icons">volume_off</i>
+                </button>
+                <p class="progresscontainer">
+                    <input class="mdl-slider mdl-js-slider" type="range"
+      min="0" max="100" value="100" tabindex="0" id="volume" />
+                </p>
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeup">
+                    <i class="material-icons">volume_up</i>
+                </button>
+            </div>
+            <!-- bottom secction with volume, progress bar and time -->
+            <section class="mdl-card mdl-shadow--8dp mdl-layout__header-row card">
+                <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect closebutton" id="volumeopen">
+                    <i class="material-icons">volume_up</i>
+                </button>
+                <p class="progresscontainer">
+                    <input class="mdl-slider mdl-js-slider" type="range"
+      min="0" max="1" value="0" tabindex="0" id="progress" />
+                </p>
+                <h6 id="time">00:00</h6>
+            </section>
+        </main>
     </div>
+</div>
 ```
 
 Or use the [index.html](src/index.html) file and modify it as you please.
@@ -163,3 +165,9 @@ function changeVolume(value) {
     document.getElementById('audio').volume = value;
 };
 ```
+
+## Credits
+
+This project the Open Source library
+jquery.adaptive-backgrounds.js (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js)
+License MIT (https://github.com/briangonzalez/jquery.adaptive-backgrounds.js#license)
