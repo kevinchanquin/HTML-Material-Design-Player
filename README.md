@@ -2,7 +2,7 @@
 
 A free HTML5 music player interface, built with the Material Design Lite library and jQuery.
 
-[See a Demo](http://www.dropwizard.io/1.0.2/docs/)
+[See a Demo](https://kevinchanquin.github.io/HTML-Material-Design-Player/)
 
 ## Getting Started
 
