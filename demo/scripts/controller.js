@@ -11,7 +11,7 @@ Funtions
     
     toggleIcon(action); //(play, pause) to change the fav button icon
     
-    setMediaInfo(cover, title, author, duration); //(url, string, string, num (milliseconds)) to set all the info of the playing media
+    setMediaInfo(cover, title, author, duration); //(url, str, str, num (milliseconds)) to set all the info of the playing media
 */
 
 $(function(){
