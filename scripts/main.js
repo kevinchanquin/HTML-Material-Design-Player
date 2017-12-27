@@ -32,12 +32,12 @@ function toggleMedia(action) {
         document.getElementById('audio').play();
     }
     
-    //when pause button is pressed play the audio element
+    //when pause button is pressed pause the audio element
     else if (action == 'pause') {
         document.getElementById('audio').pause();
     }
     
-    //when stop button is pressed play the audio element
+    //when stop button is pressed stop the audio element
     else if (action == 'stop') {
         document.getElementById('audio').pause();
         document.getElementById('audio').currentTime = 0;
