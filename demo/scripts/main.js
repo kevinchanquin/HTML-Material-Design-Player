@@ -1,5 +1,3 @@
-var tracksDisplay = [];
-
 $(function(){
     $('form').on('submit', function(event) {
         event.preventDefault(); //prevent page from reloading

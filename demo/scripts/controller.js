@@ -1,12 +1,12 @@
 /*
 Events Emitted
-    toogleMedia(action); //(play, pause, stop) when the user clicks fav button
+    toggleMedia(action); //(play, pause, stop) when the user clicks fav button
     
     seek(value); //(milliseconds) when user slides the progress bar
     
     changeVolume(value); //(0-100) when user slides the volume bar
     
-Funtions
+Functions
     updateProgress(value); //(milliseconds) to update progress bar as media plays
     
     toggleIcon(action); //(play, pause) to change the fav button icon
@@ -16,7 +16,7 @@ Funtions
 
 $(function(){
 //buttons handlers
-    //when user clics the fav button
+    //when user clicks the fav button
     $('#statebutton').on('click',function(){
         var mediaState = $('#statebutton > i').html();
         var action;
@@ -82,7 +82,7 @@ function toggleIcon(action) {
     }
 }
 
-//convert miliseconds to minutes and seconds
+//convert milliseconds to minutes and seconds
 function convertToTime(millis) {
     var minutes = Math.floor(millis / 60000);
     var seconds = ((millis % 60000) / 1000).toFixed(0);
