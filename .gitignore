@@ -67,3 +67,9 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/intellij
+
+.idea/HTML-Material-Design-Player.iml
+
+.idea/modules.xml
+
+.idea/vcs.xml
